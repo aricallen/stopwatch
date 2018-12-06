@@ -6,7 +6,6 @@
   "scripts": {
     "start": "node index.js",
     "dev": "tsc --watch",
-    "postinstall": "echo '...postinstall hook...'",
     "test": "tape-watch tests/*.js tests/**/*.js | faucet",
     "build": "tsc"
   },
