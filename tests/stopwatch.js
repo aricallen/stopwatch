@@ -10,6 +10,14 @@ test(`start`, (t) => {
   t.end();
 });
 
+test(`create`, (t) => {
+  const serverTimestamp = new Date('2019-03-03 12:12:42').getTime();
+  const sw = new Stopwatch({ startTime: serverTimestamp, state: StopwatchState.RUNNING });
+  t.equal(sw.getStartTime(), serverTimestamp);
+  t.equal(sw.getState(), StopwatchState.RUNNING);
+  t.end();
+});
+
 test(`stop`, (t) => {
   const sw = new Stopwatch();
   sw.start();

@@ -24,9 +24,9 @@ class Stopwatch implements IStopwatch {
   private state: StopwatchState;
   private startTime: number | null;
 
-  constructor() {
-    this.state = StopwatchState.IDLE;
-    this.startTime = null;
+  constructor(props = {} as StopwatchRecord) {
+    this.state = props.state || StopwatchState.IDLE;
+    this.startTime = props.startTime || null;
   }
 
   start() {
@@ -66,10 +66,6 @@ class Stopwatch implements IStopwatch {
       state: this.state,
       startTime: this.startTime,
     };
-  }
-
-  static fromRecord({ stopwatchRecord }: { stopwatchRecord: StopwatchRecord }): Stopwatch {
-    return Object.assign(new Stopwatch(), stopwatchRecord);
   }
 }
 
