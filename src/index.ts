@@ -68,7 +68,7 @@ class Stopwatch implements IStopwatch {
     };
   }
 
-  static fromRecord({ stopwatchRecord }: { stopwatchRecord: StopwatchRecord }): IStopwatch {
+  static fromRecord({ stopwatchRecord }: { stopwatchRecord: StopwatchRecord }): Stopwatch {
     return Object.assign(new Stopwatch(), stopwatchRecord);
   }
 }
