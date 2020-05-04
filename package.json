@@ -10,7 +10,7 @@
     "build": "tsc"
   },
   "devDependencies": {
-    "@types/node": "^10.12.12",
+    "@types/node": "^13.13.4",
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^3.3.0",
